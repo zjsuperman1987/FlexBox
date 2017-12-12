@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*开始flex display:flex || inline-flex*/
+		/*================================================flex 容器属性========================================================*/
+		/*flex-direction || flex-wrap || flex-flow || justify-content || align-items || align-content*/
+		ul {
+			flex-direction: row;
+			flex-direction: row-reverse;
+			flex-direction: column;
+			flex-direction: column-reverse;
+		}
+		ul {
+			flex-wrap: wrap;
+			flex-wrap: nowrap;
+			flex-wrap: wrap-reverse;
+		}
+		ul {
+			/*flex-flow: 这是 flex-direction和flex-wrap两个属性的速记属性*/
+			flex-flow: row wrap;
+			/*
+				等价于
+				flex-direction: rwo;
+				flex-wrap: wrap;
+			*/
+		}
+		ul {
+			/*justify-content: flex-start || flex-end || center || space-between || space-around*/
+			justify-content: flex-start; 	/* 沿主轴向左靠齐 */
+			justify-content: flex-end;		/* 沿主轴向右靠齐 */
+			justify-content: center;		/* 中间对齐 */
+			justify-content: space-between; /* 除开首尾， 间距在中间 */
+			justify-content: space-around; /* 所有元素平均分配剩余空间  第一个和结尾元素距Main-Axis开始边缘和结束边缘的间距是其他相邻flex项目间距的一半*/ 
+		}
+		ul {
+			/*align-items: flex-start || flex-end || center || stretch || baseline */
+			align-items: stretch;	/*默认值*/
+			align-items: flex-start;
+			align-items: flex-end;
+			align-items: center;
+			align-items: baseline;
+		}
+		ul {
+			/*align-content: 与前面的wrap相似。 但这个属性用于多行flex容器 用来控制flex项目在flex容器的排列方式 排列效果和align-items值一样但出了baseline */
+			align-content: stretch;	/*默认值*/
+			align-content: flex-start;
+			align-content: flex-end;
+			align-content: center; 
+		}
+		/*================================================flex 项目属性========================================================*/
+		li {
+			order: 1	/* -1 0 1 这样的一个排列 默认值是0  以下都是默认值*/
+			flex-grow: 0;			/*默认值*/
+			flex-shrink: 1;			/*默认值*/
+			flex-basis: auto;		/*默认值*/
+			flex: 0 1 auto;				/*上面三个的缩写*/
+		}
+		/*这是一个绝对flex项目*/
+		li {
+			flex: 1 1;				/* flex-basis 默认值为0 */
+		}
+		/*这是一个相对的flex项目*/
+		li {
+			flex-basis: 200px;		/* 只设置了flex-basis的值 */
+		}
+	</style>
+</head>
+<body>
+
+</body>
+</html>
